@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAROT</title>
+<!--  Llamar al archivo style.css -->
+<link rel="stylesheet" href="index.css">
+</head>
+
+
+<body onload="inicia();"> <!--  esto inicializa todas las funciones -->
+
+<div class="cointainer" id="cointainer">
+
+
+<div class="principal">
+
+    <div class="nombre">
+        <h1>
+            <span style="--i:1; margin-right: 40px;">T</span>
+            <span style="--i:2; margin-right: 40px;">A</span>
+            <span style="--i:3; margin-right: 40px;">R</span>
+            <span style="--i:4; margin-right: 40px;">O</span>
+            <span style="--i:5; margin-right: 40px;">T</span>
+        </h1>
+    </div>
+
+
+<!-- en esta parte de los enlaces, no trabajaré con botones, directamente trabajare con los enlaces-->
+    <div class="botonesPrincipal"> 
+
+        
+           <a  href="/historial.html">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Explicación
+           </a>
+ 
+
+        
+            <a  href="/zodiaco.html" >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                ZODIACO
+            </a> <!--   -->
+        
+
+        
+          <a  href="/juegos.html">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                JUEGOS
+          </a> <!--   -->
+        
+
+       
+          <a  href="/contacto.html" >
+            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                CONTACTO
+          </a> <!--   -->
+        
+    </div>
+
+
+
+<div class="tarot" id="tarot">
+
+    <div class="pregunta"  >
+      
+        <h2>
+            <span id="pregunta" style="--i:1; ">Concentrate en esa pregunta que te intriga...</span> 
+        </h2>
+ <!-- el id="pregunta" es el que voy a utilizar para llamarlo desde el index.js, 
+cambiar el texto manteniendo las mismas propiedades en el css -->
+     </div>
+    <div class="mazo" >
+       
+        
+        <img src="imgARCANOS/dorso.png" id="cartaElegida1"  >
+        <img src="imgARCANOS/dorso.png" id="cartaElegida2"  >
+        <img src="imgARCANOS/dorso.png" id="cartaElegida3"  >
+        <img src="imgARCANOS/dorso.png" id="cartaElegida4"  > 
+        
+    
+    </div>
+
+    <div class="botonesTarot">
+       <div class="repartir" >
+            <button onclick="finalizaTarot()" > <!-- este boton realiza la tirada y detiene el setInterval del js-->
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                TIRADA
+           </button>
+           <!-- <input type="button" value="Tirada" onclick="finalizaTarot()"> -->
+        </div> 
+        
+        <div class="mezclar">
+            <button onclick="reiniciarTarot()"> <!-- este boton reinicia el setInterval del js-->
+                 <span></span>
+                 <span></span>
+                 <span></span>
+                 <span></span>
+                 REINICIAR
+            </button>
+          <!--  <input type="button" value="Reiniciar" onclick="reiniciarTarot()"> -->
+        </div>
+    
+    
+         
+    </div>
+ <div class="textoConsejo" id="textoConsejo"></div>
+
+</div>
+</div>
+      
+
+<!-- Llamar al archivo javascript -->
+<script src="index.js"></script>
+
+
+</body>
+</html>
